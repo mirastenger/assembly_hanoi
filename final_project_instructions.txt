@@ -1,0 +1,44 @@
+*********************************************
+Towers of Hanoi Official Game Instructions
+*********************************************
+
+The game will begin by asking the user to input the number of disks that they would like to play with. The options are 2, 3, 4, or 5 disks. This input can only take one character. If this character is not an integer within the accepted range, an error message will be displayed, and the user will be reprompted to enter a disk number. 
+
+Once the disk number is collected, the game will generate the appropriate display. Below is an example with 3 disks:
+
+1
+2
+3
+=====
+A B C
+
+The numbers represent disks in ascending size order, and the letters represent the potential positions a disk can have.
+
+The user will next be prompted to enter a move. This input can only take two characters. The first character must be an integer corresponding to which disk the player would like to move. The second character must be a letter corresponding to the position that the user would like to move that disk to (not case sensitive). The display will then update to show the position of the disks after the move. For example, for the move '1C', the display will become:
+
+    1
+2
+3
+=====
+A B C
+
+There is also a move counter, which displays how many moves have been taken in hexidecimal form.
+
+If the player enters a move containing an invalid disk number or an invalid position letter, an error message will display, and the user will be reprompted to enter a move. '7B' and '2G' would be considered invalid input.
+If the user attempts to move a disk that has another disk on top of it, or if they attempt to move a larger disk to a position that already contains a smaller disk, an error message will display, and the user will be reprompted to
+enter a move. For the previously displayed example, '3B' and '2C' would be considered invalid moves.
+If the user consecutively repeats a move or attempts to move a disk to a position at which it already exists, an error message will display and the user will be reprompted to enter a move.
+Neither invalid moves nor invalid input will increment the move counter.
+
+The game will be completed when all the disks have been moved to the C position:
+
+    1
+    2
+    3
+=====
+A B C
+
+The player will receive a message of congratulations along with a message stating whether or not the minimum number of moves was used for the given number of disks.
+
+Disclaimer: The program does not account for a user input that is more or less than the specified number of characters.
+
